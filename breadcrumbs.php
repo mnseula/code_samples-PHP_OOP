@@ -9,7 +9,7 @@ $data = loadCsvData(CSV_FILE); //$data is an array
 // Sort data based on 'name' field
 usort($data, function ($a, $b) {
     return strcmp($a['name'], $b['name']);
-});;
+});
 
 // Generate breadcrumbs
 $output = generateBreadcrumbs($data);
