@@ -6,6 +6,10 @@ define('CSV_FILE', 'data.csv');
 // Load CSV data
 $data = loadCsvData(CSV_FILE);
 
+usort($data, function ($a, $b) {
+    return strcmp($a['name'], $b['name']);
+});
+
 // Generate breadcrumbs
 $output = generateBreadcrumbs($data);
 
